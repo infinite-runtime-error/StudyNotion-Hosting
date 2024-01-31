@@ -125,6 +125,7 @@ export function resetPassword(password,confirmPassword,token)
     dispatch(setLoading(true));
     try
     {
+      // console.log("first");
       const response = await apiConnector("POST",RESETPASSWORD_API,{password,confirmPassword,token});
 
       console.log("Response of Reset Password is : ",response);
