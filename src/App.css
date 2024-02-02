@@ -15,13 +15,20 @@ html,body
 
 /* https://10015.io/tools/css-loader-generator */
 .spinner {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 9px solid #f1f2ff;
-    animation: spinner-bulqg1 0.8s infinite linear alternate,
-      spinner-oaa3wk 1.6s infinite linear;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+  to {
+     transform: rotate(1turn);
   }
+}
 
 
 /* Buttons */

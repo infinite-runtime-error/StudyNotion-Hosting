@@ -53,6 +53,8 @@ const CourseDetailsCard = ({course,setConfirmationModal,handleBuyCourse}) => {
         toast.success("Link Copied");
     }
 
+    console.log("course?.instructions",course?.instructions);
+
   return (
     <>
       <div

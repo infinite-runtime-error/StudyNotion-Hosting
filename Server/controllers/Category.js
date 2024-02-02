@@ -50,7 +50,7 @@ exports.showAllCategories = async (req, res) => {
 exports.categoryPageDetails = async (req, res) => {
     try {
       const { categoryId } = req.body
-      console.log("PRINTING CATEGORY ID: ", categoryId);
+      // console.log("PRINTING CATEGORY ID : ", categoryId);
       // Get courses for the specified category
       const selectedCategory = await Category.findById(categoryId)
         .populate({
@@ -78,12 +78,14 @@ exports.categoryPageDetails = async (req, res) => {
       }
   
       // Get courses for other categories
+      
       const categoriesExceptSelected = await Category.find({
         _id: { $ne: categoryId },
       })
+   
       let differentCategory = await Category.findOne(
-        categoriesExceptSelected[getRandomInt(categoriesExceptSelected.length)]
-          ._id
+        categoriesExceptSelected[getRandomInt(categoriesExceptSelected.length)._id]
+          
       )
         .populate({
           path: "courses",

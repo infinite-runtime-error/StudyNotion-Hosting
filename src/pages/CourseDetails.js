@@ -58,8 +58,10 @@ const CourseDetails = () => {
     const [avgReviewCount,setAvgReviewCount] = useState(0);
     useEffect(()=>
     {
+        console.log("Average rating count",courseData?.data[0]?.ratingAndReviews);
         const count = GetAvgRating(courseData?.data[0]?.ratingAndReviews);
-        setAvgReviewCount(count);
+        setAvgReviewCount(count.length);
+        console.log("Average Count number",count);
     },[courseData]);
 
     const [totalNoOfLectures,setTotalNoOfLectures] = useState(0);
