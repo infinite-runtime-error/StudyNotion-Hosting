@@ -23,16 +23,16 @@ database();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-    // cors({
-    //     origin:"https://study-notion-hosting-frontend-5o7e1odqe.vercel.app/",
-    //     credentials:true
-    // })
+    cors({
+        origin:"https://study-notion-hosting-frontend-5o7e1odqe.vercel.app/",
+        credentials:true
+    })
 
   
-  res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-frontend-5o7e1odqe.vercel.app');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
+  // res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-frontend-5o7e1odqe.vercel.app');
+  // res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  // res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  // next();
 
 );
 
