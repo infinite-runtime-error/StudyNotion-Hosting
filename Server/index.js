@@ -35,7 +35,7 @@ app.use(cookieParser());
 
 app.use((req, res, next) => {
   //res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-frontend-cb61fas2o.vercel.app');
-  res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-frontend-jatin-ranas-projects-f3e8c072.vercel.app/');
+  res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-f-git-e9c595-jatin-ranas-projects-f3e8c072.vercel.app/');
  
   https://study-notion-hosting-frontend-cb61fas2o.vercel.app/
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
