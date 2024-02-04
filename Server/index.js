@@ -63,9 +63,9 @@ app.use(cookieParser());
 
 // List of allowed origins
 const allowedOrigins = [
-  'https://study-notion-hosting-frontend-jatin-ranas-projects-f3e8c072.vercel.app/',
+  'https://study-notion-hosting-frontend-theta.vercel.app/',
   'https://study-notion-hosting-f-git-e9c595-jatin-ranas-projects-f3e8c072.vercel.app/',
-  'https://study-notion-hosting-frontend-seven.vercel.app/'
+  'https://study-notion-hosting-frontend-jqhqym8ua.vercel.app/'
   // Add more origins as needed
 ];
 
