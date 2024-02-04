@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:'https://study-notion-hosting-frontend-theta.vercel.app',
+		origin:'*',
 		credentials:true,
 	})
 )
