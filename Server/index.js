@@ -23,15 +23,11 @@ database();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-    cors({
-        origin:"https://study-notion-hosting-frontend-theta.vercel.app/",
-        credentials:true
-     })
-
-  
-  
-
-);
+	cors({
+		origin:'https://study-notion-hosting-frontend-theta.vercel.app',
+		credentials:true,
+	})
+)
 
 
 app.use(fileUpload({
