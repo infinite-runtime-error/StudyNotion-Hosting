@@ -43,18 +43,61 @@ app.use(cookieParser());
 //   next();
 // });
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-f-git-e9c595-jatin-ranas-projects-f3e8c072.vercel.app');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.header('Access-Control-Allow-Credentials', 'true');
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', 'https://study-notion-hosting-f-git-e9c595-jatin-ranas-projects-f3e8c072.vercel.app');
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//   res.header('Access-Control-Allow-Credentials', 'true');
 
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
+//   if (req.method === 'OPTIONS') {
+//     return res.sendStatus(200);
+//   }
+
+//   next();
+// });
+
+
+
+
+
+
+// List of allowed origins
+const allowedOrigins = [
+  'https://study-notion-hosting-f-git-e9c595-jatin-ranas-projects-f3e8c072.vercel.app',
+  'https://study-notion-hosting-frontend-jatin-ranas-projects-f3e8c072.vercel.app/',
+  'https://study-notion-hosting-frontend-eight.vercel.app/'
+  // Add more origins as needed
+];
+
+// Add this middleware to handle CORS
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+
+  // Check if the request origin is in the allowedOrigins array
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Credentials', 'true');
+
+    if (req.method === 'OPTIONS') {
+      return res.sendStatus(200);
+    }
   }
 
   next();
 });
+
+
+
+
+
+
+
+
+
+
+
 
 app.use(fileUpload({
     useTempFiles:true,
